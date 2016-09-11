@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by truon on 11/09/2016.
  */
-public class FirstApp {
+public class QuanLySinhVien {
     public static void main(String args[]) {
 
         SinhVien[] sv = new SinhVien[2];
