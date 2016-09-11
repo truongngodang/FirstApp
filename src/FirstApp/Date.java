@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Date {
 
     int ngay, thang, nam;
-    private static final int ZERO_YEAR = 1990;
+
     private static final int LON_HON = 1;
     private static final int BANG_NHAU = 0;
     private static final int BE_HON = -1;
@@ -18,8 +18,6 @@ public class Date {
         this.ngay = 1;
         this.nam = 1990;
     }
-
-    ;
 
     Date(int ngay, int thang, int nam) {
         this.nam = nam;
@@ -101,7 +99,7 @@ public class Date {
     int getSoNgay() {
         int soNgayDenThis = 0;
         int soNgayDenHienTai = 0;
-        Date zero = new Date(1, 1, ZERO_YEAR);
+        Date zero = new Date(1, 1, this.nam);
         Date hienTai = new Date(11, 9, 2016);
         while (zero.nam < this.nam) {
             if (zero.checkNamNhuan()) {
@@ -115,7 +113,7 @@ public class Date {
             soNgayDenThis += this.getSoNgayOfThang(i);
         }
         soNgayDenThis += this.ngay;
-        zero.nam = ZERO_YEAR;
+        zero.nam = this.nam;
         while (zero.nam < hienTai.nam) {
             if (zero.checkNamNhuan()) {
                 soNgayDenHienTai += 366;

@@ -9,7 +9,7 @@ public class QuanLySinhVien {
     public static void main(String args[]) {
 
         SinhVien[] sv = new SinhVien[2];
-        sv[0] = new SinhVien("Thúy Vân ", 127, new Date(11, 8, 1991));
+        sv[0] = new SinhVien("Thúy Vân ", 127, new Date(10, 9, 1992));
         sv[1] = new SinhVien("Ngọc Trinh", 128, new Date(24, 8, 1991));
 
         for (int i = 0; i < sv.length; i++) {
