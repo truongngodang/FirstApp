@@ -8,14 +8,14 @@ import java.util.Scanner;
 public class SinhVien {
 
     String ten;
-    Date ngaySinh = new Date();
+    ThoiGian ngaySinh = new ThoiGian();
     int msv;
 
     SinhVien() {
 
     }
 
-    SinhVien(String ten, int msv, Date ngaySinh) {
+    SinhVien(String ten, int msv, ThoiGian ngaySinh) {
         this.msv = msv;
         this.ten = ten;
         this.ngaySinh = ngaySinh;

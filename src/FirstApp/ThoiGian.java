@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * Created by truon on 11/09/2016.
  */
-public class Date {
+public class ThoiGian {
 
     int ngay, thang, nam;
 
@@ -13,19 +13,19 @@ public class Date {
     private static final int BANG_NHAU = 0;
     private static final int BE_HON = -1;
 
-    Date() {
+    ThoiGian() {
         this.ngay = 1;
         this.ngay = 1;
         this.nam = 1990;
     }
 
-    Date(int ngay, int thang, int nam) {
+    ThoiGian(int ngay, int thang, int nam) {
         this.nam = nam;
         this.ngay = ngay;
         this.thang = thang;
     }
 
-    int soSanh(Date date) {
+    int soSanh(ThoiGian date) {
         if (this.getSoNgay() > date.getSoNgay()) {
             return LON_HON;
         }
@@ -99,8 +99,8 @@ public class Date {
     int getSoNgay() {
         int soNgayDenThis = 0;
         int soNgayDenHienTai = 0;
-        Date zero = new Date(1, 1, this.nam);
-        Date hienTai = new Date(11, 9, 2016);
+        ThoiGian zero = new ThoiGian(1, 1, this.nam);
+        ThoiGian hienTai = new ThoiGian(11, 9, 2016);
         while (zero.nam < this.nam) {
             if (zero.checkNamNhuan()) {
                 soNgayDenThis += 366;
@@ -134,7 +134,7 @@ public class Date {
     String getSoTuoi() {
         int soNgayConLai = this.getSoNgay();
         int soTuoi = 0;
-        Date hienTai = new Date(11, 9, 2016);
+        ThoiGian hienTai = new ThoiGian(11, 9, 2016);
         while (this.nam < hienTai.nam) {
             if (this.checkNamNhuan()) {
                 soNgayConLai -= 366;
